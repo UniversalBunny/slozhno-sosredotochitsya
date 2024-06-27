@@ -80,7 +80,7 @@
   border-radius: 50%;
 }
 
-.header__theme-menu{
+.header__theme-menu {
   display: flex;
   justify-self: center;
   align-self: flex-start;
@@ -275,7 +275,7 @@
 
 .footer__title {
   font-weight: 700;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 82.5%;
   color: var(--header-title-color);
   text-shadow: 2px 2px 0px var(--accent-color);
