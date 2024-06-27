@@ -1,5 +1,282 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. 
+создать для section отдельный класс куда вынести все со шрифтами, паддинги.
+*/
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  inline-size: 1024px;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-style: normal;
+  line-height: 23px;
+  background-color: var(--background-color);
+}
+
+.header {
+  inline-size: 100%;
+  min-block-size: 768px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-block-end: 60px;
+}
+
+.decorated-zone::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--decor-color);
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.decorated-zone::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--decor-color);
+  border-bottom: none;
+  border-left: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.lamp {
+  display: var(--display);
+  position: absolute;
+}
+
+.lamp::before {
+  content: "REC";
+  position: absolute;
+  width: 33px;
+  height: 26px;
+  left: 943px;
+  top: 20px;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--decor-color);
+}
+
+.lamp::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 986px;
+  top: 28px;
+  background-color: var(--decor-color);
+  box-shadow: 0px 0px 4px 2px var(--decor-color);
+  border-radius: 50%;
+}
+
+.header__theme-menu{
+  display: flex;
+  justify-self: center;
+  align-self: flex-start;
+  position: relative;
+  padding-block-start: 20px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: var(--font-size);
+  line-height: 18px;
+  text-align: center;
+  color: var(--decor-color);
+}
+
+.header__theme-menu-button {
+  padding: 1.5px 15px;
+  border: none;
+  background-color: transparent;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--decor-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--decor-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--decor-color);
+}
+
+.header__title {
+  display: flex;
+  align-self: flex-end;
+  font-weight: 700;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 82.5%;
+  color: var(--header-title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.header__text-block {
+  padding: 114px 20px 134px 513px;
+  font-weight: 700;
+  font-size: var(--font-size);
+}
+
+.title-decor {
+  color: var(--title-text-color);
+  background-color:  var(--title-decor-color);
+}
+
+.section {
+  padding: 0 20px;
+}
+
+.section__title {
+  inline-size: 315px;
+  font-weight: 700;
+  font-size: var(--font-size);
+  color: var(--section-title-color);
+}
+
+.content__title {
+  font-weight: 700;
+  font-size: var(--font-size);
+}
+
+.content__subtitle {
+  font-weight: 400;
+  font-size: var(--font-size);
+}
+
+.content__text {
+  margin-block-start: 13px;
+  color: var(--content-text-color);
+  font-size: var(--font-size);
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid #F1B2CE;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-block-end: 80px;
+}
+
+.reasons__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question {
+  display: grid;
+  gap: 22px;
+  margin-block-end: 85px;
+}
+
+.question__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-block-end: 80px;
+}
+
+.answers__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery {
+  display: grid;
+  gap: 20px;
+  margin-block-end: 60px;
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 0.5fr 1fr;
+  gap: 20px;
+}
+
+.sunset {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+
+.ice-cream {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+
+.books {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.tape {
+  grid-column: 1;
+  grid-row: 2/4;
+}
+
+.street {
+  grid-column: 2/4;
+  grid-row: 3/4;
+}
+
+.footer {
+  min-block-size: 768px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);;
+  line-height: 82.5%;
+  color: var(--header-title-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
