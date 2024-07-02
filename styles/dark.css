@@ -19,6 +19,7 @@
   --section-title-color: #ff0070;
   --content-text-color: #F1B2CE;
   --focus-link-color: #f1b2ce;
+  --hover-button-color: #FF007066;
 }
 
 :root.theme-dark {
@@ -32,4 +33,5 @@
   --section-title-color: #ff0070;
   --content-text-color: #F1B2CE;
   --focus-link-color: #f1b2ce;
+  --hover-button-color: #FF007066;
 }
